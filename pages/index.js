@@ -5,7 +5,7 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import { useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import web1 from "../public/web1.png";
 import me from "../public/me.png";
@@ -25,10 +25,12 @@ import git_logo from "../public/git.png";
 import fastapi from "../public/fastapi.png"
 import postgres from "../public/postgres.svg"
 import python from "../public/python.png"
+import car from "../public/car2.png"
 
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(null);
+
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -61,7 +63,7 @@ export default function Home() {
             <a href="https://www.instagram.com/jaspree.t.sangha/"><AiFillInstagram /></a>
           </div>
           <div className="relative mx-auto rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
-            < Image src={me} objectFit="cover" layout="fill" />
+            < Image alt="" src={me} objectFit="cover" layout="fill" />
           </div>
         </section>
 
@@ -75,19 +77,19 @@ export default function Home() {
           </div>
           <div className="lg:flex gap-20 justify-center">
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image src={web} width={100} height={100} className="mx-auto" />
+              <Image alt="" src={web} width={100} height={100} className="mx-auto" />
               <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">Front-End Developer</h3>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image src={mobile} width={100} height={100} className="mx-auto" />
+              <Image alt="" src={mobile} width={100} height={100} className="mx-auto" />
               <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">React.js Developer</h3>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image src={backend} width={100} height={100} className="mx-auto" />
+              <Image alt="" src={backend} width={100} height={100} className="mx-auto" />
               <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">Back-End Developer</h3>
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image src={creator} width={100} height={100} className="mx-auto" />
+              <Image alt="" src={creator} width={100} height={100} className="mx-auto" />
               <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">Full-Stack Developer</h3>
             </div>
           </div>
@@ -96,40 +98,40 @@ export default function Home() {
         <section>
           <div className="lg:flex gap-3">
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image src={html} width={100} height={100} className="mx-auto" />
+              <Image alt="" src={html} width={100} height={100} className="mx-auto" />
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image src={css} width={100} height={100} className="mx-auto" />
+              <Image alt="" src={css} width={100} height={100} className="mx-auto" />
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image src={javascript} width={100} height={100} className="mx-auto" />
+              <Image alt="" src={javascript} width={100} height={100} className="mx-auto" />
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image src={python} width={100} height={100} className="mx-auto" />
+              <Image alt="" src={python} width={100} height={100} className="mx-auto" />
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image src={reactjs} width={100} height={100} className="mx-auto" />
+              <Image alt="" src={reactjs} width={100} height={100} className="mx-auto" />
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image src={tailwind} width={100} height={100} className="mx-auto" />
+              <Image alt="" src={tailwind} width={100} height={100} className="mx-auto" />
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image src={nodejs} width={100} height={100} className="mx-auto" />
+              <Image alt="" src={nodejs} width={100} height={100} className="mx-auto" />
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image src={docker} width={100} height={100} className="mx-auto" />
+              <Image alt="" src={docker} width={100} height={100} className="mx-auto" />
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image src={django} width={100} height={100} className="mx-auto" />
+              <Image alt="" src={django} width={100} height={100} className="mx-auto" />
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image src={fastapi} width={100} height={100} className="mx-auto" />
+              <Image alt="" src={fastapi} width={100} height={100} className="mx-auto" />
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image src={git_logo} width={100} height={100} className="mx-auto" />
+              <Image alt="" src={git_logo} width={100} height={100} className="mx-auto" />
             </div>
             <div className="text-center shadow-lg p-10 rounded-xl my-10">
-              <Image src={postgres} width={100} height={100} className="mx-auto" />
+              <Image alt="" src={postgres} width={100} height={100} className="mx-auto" />
             </div>
           </div>
         </section>
@@ -142,13 +144,15 @@ export default function Home() {
               The following projects showcase the skills I've required through my journey of becoming a software engineer.  Each project is breifly describled with links to code, repositories and live demos in it.  All these projects demonstrate my ability to solve complex problems, work with technologies I've just been introduced to, and manage both time and teamwork effectively.
             </p>
           </div>
-          <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/3 flex-1">
-              <a href="https://gitlab.com/planiteers/project-plan-it"><Image src={web1} className="rounded-lg" /></a>
+          <div className="flex flex-col gap-10 py-5 lg:flex-row lg:flex-wrap">
+            <div className="basis 1/3 flex-5">
+              <a href="https://gitlab.com/planiteers/project-plan-it"><Image alt="" src={web1} className="rounded-lg" /></a>
+            </div>
+            <div className="basis 1/3 flex-5">
+              <a href="https://gitlab.com/IamYorye/carppointment"><Image alt="" src={car} className="rounded-lg" /></a>
             </div>
           </div>
         </section>
-
       </main>
 
     </div>
